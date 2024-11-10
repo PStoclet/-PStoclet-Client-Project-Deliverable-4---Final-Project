@@ -1,0 +1,192 @@
+/* Mobile-First Design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #222; /* High contrast text color */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #ccc;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover,
+.container:active {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    background-color: #e8e8e8; /* Light background with good contrast */
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #222; /* Darker color for better contrast */
+}
+
+.athlete-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+}
+
+table thead th {
+    background-color: #007a65;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+}
+
+table tr:hover {
+    background-color: #d4d4d4;
+}
+
+/* Dropdown Styling */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+select:hover,
+select:active {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+button {
+    background-color: #007a65; /* Darker green for high contrast */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+button:active {
+    background-color: #005f4c;
+}
+
+/* Image Styling */
+#athleteImage {
+    object-fit: cover;
+    width: 200px; /* Initial size */
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footnote {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2c2c2c;
+        color: #f0f0f0;
+    }
+    .container {
+        background-color: #3c3c3c;
+    }
+    .section {
+        background-color: #4a4a4a;
+    }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* Custom Color Scheme Adaptation */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f4f4f4; /* Light background color for light mode */
+        color: #222; /* High contrast text color for light mode */
+    }
+    .container {
+        background-color: white; /* Light container background for readability */
+    }
+    .section {
+        background-color: #e8e8e8; /* Light section background for better contrast */
+    }
+    table thead th {
+        background-color: #007a65; /* Darker header background for contrast */
+        color: white; /* Light text color for readability */
+    }
+    button {
+        background-color: #007a65; /* Base button color */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Darker background for dark mode */
+        color: #e0e0e0; /* Lighter text color for dark mode */
+    }
+    .container {
+        background-color: #333; /* Darker container background for better contrast in dark mode */
+    }
+    .section {
+        background-color: #424242; /* Dark section background for uniformity in dark mode */
+    }
+    table thead th {
+        background-color: #005f4c; /* Darker green for header in dark mode */
+    }
+    button {
+        background-color: #005f4c; /* Darker button color for uniformity in dark mode */
+    }
+}
