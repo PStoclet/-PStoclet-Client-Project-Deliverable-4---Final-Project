@@ -82,3 +82,4 @@ with open('athlete_datawomen.json', 'w', encoding='utf-8') as json_file:
     json.dump(athlete_data, json_file, ensure_ascii=False, indent=4)
 
 print("Athlete data saved as JSON.")
+
